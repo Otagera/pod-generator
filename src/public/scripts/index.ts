@@ -18,6 +18,17 @@ class Index {
 	converting: Element = document.querySelector('.converting');
 
 	init = (): void => {
+		$(function(){
+			$('[data-toggle="popover"]').popover()
+		});
+		$(".popup-img").magnificPopup({
+			type:"image",
+			closeOnContentClick: true,
+			mainClass:"popup-img",
+			image:{
+				verticalFit: true
+			}
+		});
 		this.onAddSendFileMessage();
 		this.onAttchBtnClick();
 		this.onDownloadFileClick();

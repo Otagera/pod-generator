@@ -8,6 +8,17 @@ var Index = /** @class */ (function () {
         this.fileDownload = document.querySelector('.file-download');
         this.converting = document.querySelector('.converting');
         this.init = function () {
+            $(function () {
+                $('[data-toggle="popover"]').popover();
+            });
+            $(".popup-img").magnificPopup({
+                type: "image",
+                closeOnContentClick: true,
+                mainClass: "popup-img",
+                image: {
+                    verticalFit: true
+                }
+            });
             _this.onAddSendFileMessage();
             _this.onAttchBtnClick();
             _this.onDownloadFileClick();
