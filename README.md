@@ -1,7 +1,7 @@
 # `Live Demo`
-This is the github page of my portfolio that could be found [here](http://lenxo-chatapp.herokuapp.com/).
+This is the github page of my portfolio that could be found [here](http://pod-generator.herokuapp.com/).
 
-This project was created using ExpressJs, Typescript, Socket.io 
+This project was created using ExpressJs, Typescript, ExcelJs
 
 ## Available Scripts
 
