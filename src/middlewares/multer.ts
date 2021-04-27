@@ -11,6 +11,7 @@ cloudinaryV2.config({
 });
 
 let storage = null;
+/*
 if(process.env.NODE_ENV === 'production'){
 	storage = new CloudinaryStorage({
 		cloudinary: cloudinaryV2,
@@ -23,6 +24,7 @@ if(process.env.NODE_ENV === 'production'){
 		}
 	});
 }else {
+*/
 	storage = multer.diskStorage({
 		destination: (req, file, cb)=>{
 			if(!fs.existsSync('./uploads/')){
@@ -38,7 +40,7 @@ if(process.env.NODE_ENV === 'production'){
 			cb(null, new Date().toISOString().replace(/:/g, '-') + file.originalname);
 		}
 	});
-}
+//}
 
 const filefilter = (req, file, cb)=>{
 	if(file.mimetype === 'image/jpeg'  || file.mimetype === 'image/png' || file.mimetype === 'image/svg+xml'){
