@@ -127,10 +127,7 @@ class Index {
 		});
 	}
 	updateFileURL(fileURL: string){
-		if(window.location.origin === 'http://localhost:8080' || window.location.origin === 'http://192.168.43.240:8080'){
-			return 'api/' + fileURL;
-		}
-		return fileURL;
+		return 'api/' + fileURL;
 	}
 	formatBytes = (bytes, decimals = 2): string =>{
 	    if (bytes === 0) return '0 Bytes';

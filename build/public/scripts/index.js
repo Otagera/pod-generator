@@ -141,10 +141,7 @@ var Index = /** @class */ (function () {
         };
     }
     Index.prototype.updateFileURL = function (fileURL) {
-        if (window.location.origin === 'http://localhost:8080' || window.location.origin === 'http://192.168.43.240:8080') {
-            return 'api/' + fileURL;
-        }
-        return fileURL;
+        return 'api/' + fileURL;
     };
     return Index;
 }());
